@@ -73,7 +73,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 }
 
 dependencies {
-    api "com.github.getstream:stream-chat-android-client:1.16.8"
+    api project(":stream-chat-client")
 
     def room_version = "2.2.5"
     def work_version = "2.4.0"

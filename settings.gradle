@@ -1,5 +1,7 @@
 include (
 		':stream-chat-android-components',
 		':stream-chat-android-components-sample',
-		':stream-chat-offline-support'
+		':stream-chat-offline-support',
+		':stream-chat-client',
+		':stream-chat-client-sample'
 )

@@ -9,7 +9,10 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
         google()
         jcenter()
-        mavenLocal()
+        mavenCentral()
+        maven {
+            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
+        }
     }
 
     dependencies {
@@ -31,9 +34,9 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
-        mavenLocal()
         maven { url "https://jitpack.io" }
         mavenLocal()
     }

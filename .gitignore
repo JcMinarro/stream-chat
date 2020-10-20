@@ -5,15 +5,13 @@ stream-chat-android-components-sample/.sign/keystore.properties
 stream-chat-android-components-sample/.sign/keystore.properties.asc
 stream-chat-android-components-sample/.sign/release.keystore
 stream-chat-android-components-sample/.sign/release.keystore.asc
-.gradle
-/local.properties
-/.idea/
 
 # Built application files
 *.apk
 *.aar
 *.ap_
 *.aab
+*.exec
 
 .composite
 
@@ -52,7 +50,6 @@ proguard/
 captures/
 
 # IntelliJ
-*.iml
 .idea/*
 
 # Keystore files
@@ -90,7 +87,6 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
-*.iml
 .gradle
 /local.properties
 /.idea/caches
@@ -100,9 +96,13 @@ lint/tmp/
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
+
+/.idea/
+/projectFilesBackup/
+/projectFilesBackup1/
 /build
 /captures
-.externalNativeBuild
 stream-chat-android-components-sample/app-config-custom.json
 /attachments/*
 .cxx
+/sample/app-config-custom.json
