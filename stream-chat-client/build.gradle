@@ -5,12 +5,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'org.jlleitschuh.gradle.ktlint'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "de.mannodermaus.android-junit5"
 apply plugin: "com.hiya.jacoco-android"
-
-group = 'com.github.JcMinarro'
-version = com.getstream.sdk.chat.Configuration.versionName
+apply plugin: "maven-publish"
 
 android {
     compileSdkVersion 28
@@ -114,6 +111,23 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation('org.awaitility:awaitility:4.0.2') {
         exclude group: "org.hamcrest", module: "hamcrest"
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = 'com.github.JcMinarro'
+                artifactId = 'final'
+                version = '1.0'
+            }
+        }
     }
 }
 
