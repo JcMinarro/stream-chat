@@ -81,7 +81,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 
 dependencies {
 
-    api Dependencies.streamLivedata
+    api project(":stream-chat-offline-support")
 
     implementation Dependencies.kotlinSTDLib
     implementation Dependencies.appCompat

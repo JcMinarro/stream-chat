@@ -103,6 +103,7 @@ object Dependencies {
     const val koinTest = "org.koin:koin-test:$KOIN_VERSION"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
     const val kotlinSTDLib = "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+    const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:$KOTLIN_VERSION"
     const val ktlintPlugin = "org.jlleitschuh.gradle:ktlint-gradle:$KTLINT_VERSION"
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:$LEAK_CANARY_VERSION"
     const val lifecycleExtension = "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_EXTENSION_VERSION"
