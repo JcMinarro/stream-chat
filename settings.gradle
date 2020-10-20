@@ -1,1 +1,4 @@
-include ':client', ':sample'
+include (
+    ':stream-chat-client',
+    ':stream-chat-client-sample'
+)

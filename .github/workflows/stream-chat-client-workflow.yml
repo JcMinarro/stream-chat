@@ -15,9 +15,9 @@ jobs:
         with:
           java-version: 1.8
       - name: ktlint
-        run: ./gradlew ktlintCheck
+        run: ./gradlew :stream-chat-client:ktlintCheck :stream-chat-client-sample:ktlintCheck
       - name: Unit tests
-        run: ./gradlew test --stacktrace
+        run: ./gradlew :stream-chat-client:test :stream-chat-client-sample:test --stacktrace
       - name: Coverage
         run: ./gradlew jacocoTestReport
       - name: Upload Coverage
@@ -27,10 +27,10 @@ jobs:
         if: failure()
         with:
           name: testDebugUnitTest
-          path: client/build/reports/tests/testDebugUnitTest
+          path: stream-chat-client/build/reports/tests/testDebugUnitTest
       - name: Upload testDebugUnitTest results
         uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: testReleaseUnitTest
-          path: client/build/reports/tests/testReleaseUnitTest
+          path: stream-chat-client/build/reports/tests/testReleaseUnitTest
