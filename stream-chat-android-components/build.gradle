@@ -9,7 +9,10 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'de.mannodermaus.android-junit5'
 apply plugin: 'org.jlleitschuh.gradle.ktlint'
-apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.JcMinarro'
+version = com.getstream.sdk.chat.Configuration.versionName
 
 def DEFAULT_API_ENDPOINT = 'chat-us-east-1.stream-io-api.com'
 def DEFAULT_API_KEEP_ALIVE_TIMEOUT = 1000 * 45
