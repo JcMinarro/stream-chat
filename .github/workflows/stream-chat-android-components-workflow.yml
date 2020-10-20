@@ -14,19 +14,19 @@ jobs:
       with:
         java-version: 1.8
     - name: KtLint
-      run: bash ./gradlew ktlintCheck
+      run: bash ./gradlew :stream-chat-android-components:ktlintCheck :stream-chat-android-components-sample:ktlintCheck
     - name: Unit tests
-      run: bash ./gradlew test --stacktrace
+      run: bash ./gradlew :stream-chat-android-components:test :stream-chat-android-components-sample:test --stacktrace
     - name: Upload testDebugUnitTest Results
       uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: testDebugUnitTest
-        path: library/build/reports/tests/testDebugUnitTest
+        path: stream-chat-android-components/build/reports/tests/testDebugUnitTest
     - name: Upload testDebugUnitTest Results
       uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: testReleaseUnitTest
-        path: library/build/reports/tests/testReleaseUnitTest
+        path: stream-chat-android-components/build/reports/tests/testReleaseUnitTest
 
